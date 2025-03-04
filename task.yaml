@@ -1,0 +1,8 @@
+# This task fetches secrets from Azure Key Vault and makes them available as environment variables in the pipeline
+- task: AzureKeyVault@2  # This specifies the Azure Key Vault task version 2
+  inputs:  # This section defines the inputs for the task
+    azureSubscription: $(azureSubscription)  # The Azure subscription ID, defined in the pipeline or in the library
+    KeyVaultName: $(keyVaultName)  # The name of the Azure Key Vault, defined in the pipeline or in the library
+    SecretsFilter: $(secretName)  # this we are getting from the key vault
+    RunAsPreJob: true  # Indicates whether to run this task as a pre-job (set to true to run as a pre-job)
+    RunAsPreJob: false  # Indicates whether to run this task as a pre-job (set to false to run as a regular job step)

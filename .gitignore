@@ -1,0 +1,52 @@
+# Ignore build output directories
+bin/
+obj/
+
+# Ignore Visual Studio files
+.vs/
+.vscode/
+
+# Ignore user-specific files
+*.user
+*.suo
+
+# Ignore log files
+*.log
+
+# Ignore compiled binary files
+*.dll
+*.exe
+*.pdb
+
+# Ignore package directories
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Ignore IDE-specific files
+*.csproj.user
+
+# Ignore cache files
+*.cache
+
+# Ignore other unnecessary files
+*.md
+
+# Ignore large files
+*.zip
+*.tar.gz
+*.rar
+*.iso
+*.7z
+*.mp4
+*.mkv
+*.avi
+*.mov
+*.jpg
+*.png
+*.bmp
+*.gif
+
+# Ignore large binaries
+kubectl
+minikube-linux-amd64
