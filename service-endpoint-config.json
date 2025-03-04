@@ -1,0 +1,16 @@
+{
+    "name": "MyServiceConnection",
+    "type": "azurerm",
+    "authorization": {
+      "parameters": {
+        "serviceprincipalid": "04b07795-8ddb-461a-bbee-02f9e1bf7b46",
+        "serviceprincipalkey": "mKd8Q~GjWsY69pX_yQ3YxMx2sEywnRj~AqkdvcKS",
+        "tenantid": "0e42fbb1-fb7d-407f-8fc1-50d831472118"
+      },
+      "scheme": "ServicePrincipal"
+    },
+    "data": {
+      "subscriptionId": "92e0fdd0-53e0-473b-8050-3f49ec0d04ae",
+      "subscriptionName": "Free Trial"
+  }
+}
