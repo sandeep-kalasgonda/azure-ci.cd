@@ -1,11 +1,11 @@
 trigger:
-- main
+- main  # Ensure this matches the branch name in your GitHub repository
 
 variables:
-  azureSubscription: '92e0fdd0-53e0-473b-8050-3f49ec0d04ae'  # Replace with your Azure subscription name
-  keyVaultName: 'nec-test'            # Replace with your Key Vault name
-  dockerRegistry: 'sandeep3414'         # Replace with your Docker registry name
-  imageName: 'todo4'                   # Replace with your Docker image name
+  azureSubscription: '92e0fdd0-53e0-473b-8050-3f49ec0d04ae'  # Your Azure subscription ID
+  keyVaultName: 'nec-test'  # The name of your Azure Key Vault
+  dockerRegistry: 'sandeep3414'  # Replace with your Docker registry name
+  imageName: 'todo4'  # Replace with your Docker image name
 
 jobs:
 - job: BuildAndPush
@@ -21,7 +21,7 @@ jobs:
       scriptLocation: 'inlineScript'
       inlineScript: |
         echo "Fetching Docker password from Azure Key Vault..."
-        DOCKER_PASSWORD=$(az keyvault secret show --name DOCKER_PASSWORD --vault-name $(keyVaultName) --query value -o tsv)
+        DOCKER_PASSWORD=$(az keyvault secret show --name docker-password --vault-name $(keyVaultName) --query value -o tsv)
         echo "Docker password retrieved successfully."
 
         echo "Logging in to Docker..."
