@@ -5,7 +5,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  azureSubscription: '92e0fdd0-53e0-473b-8050-3f49ec0d04ae'  # Your Azure subscription ID
+  azureSubscription: 'MyServiceConnection'  # Update with your service connection name
   keyVaultName: 'nec-test'  # The name of your Azure Key Vault
   secretName: 'docker-password'  # The name of the secret in Azure Key Vault saving the Docker password
 
